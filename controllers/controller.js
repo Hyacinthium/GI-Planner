@@ -65,7 +65,7 @@ const controller = {
                 console.log(err);
         });
     },
-
+//here
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
