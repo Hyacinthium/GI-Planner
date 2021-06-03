@@ -35,14 +35,16 @@
 
         <div id="chara-name" class = "stats1">
             Name:
+            <p class="stats1">{{bio}}</p>
             <form id="chara-form" method="GET">
-                <input type="text" id="chara-input" name="chara" class="stats1" placeholder="{{chara}}"></input>
+                <input type="text" id="chara-input" name="chara" class="bio" placeholder="{{chara}}"></input>
                     <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
             </form>
         </div>
 
         <div id="vision-name" class = "stats1">
             Vision:
+            <p class="stats1">{{vision}}</p>
             <form id="vision-form" method="GET">
                 <input type="text" id="vision-input" name="chara" class="stats1" placeholder="{{vision}}"></input>
                     <input type="submit" id="vision-submit" class="save-btn" value="save"></input>
@@ -51,6 +53,7 @@
 		 
          <div id="chara-name" class = "stats_weapon">
             Weapon:
+            <p class="stats1">{{weap}}</p>
             <form id="chara-form" method="GET">
                 <input type="text" id="chara-input" name="chara" class="stats_weapon" placeholder="{{weap}}"></input>
                     <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
