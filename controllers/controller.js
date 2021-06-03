@@ -14,14 +14,10 @@ const controller = {
     },   // >,< if meron pa sunod
 
     getSignUp: function(req, res) {
-        // add to routes and render sign u
         res.render('signup',{});
-
-
     },
 
     getLogIn: function(req, res) {
-        // add to routes and render login
         res.render('login',{});
     },
 
