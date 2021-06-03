@@ -19,7 +19,31 @@ const controller = {
 
     getProfile: function(req, res) {
         let sess = req.session;
-        res.render('profile',{name: sess.traveler.username});
+        res.render('profile',{  name: sess.traveler.username, character: sess.traveler.character,
+                                vision: sess.traveler.vision, weapon: sess.traveler.weapon,
+                                flower: sess.traveler.flower, plume: sess.traveler.plume,
+                                sands: sess.traveler.sands, goblet: sess.traveler.goblet,
+                                circlet: sess.traveler.circlet });
+    },
+
+    getUpdateCharacter: function(req, res) {
+        let sess = req.session;
+        character = req.query.character;
+
+        sess.traveler.character = character;
+        sess.save();
+
+        profile = new Profile({
+            about: about,
+            bio: sess.okami.profile.bio,
+            followers: sess.okami.profile.followers,
+            games: sess.okami.profile.games
+        })
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
     },
 
     postSignUp: function(req, res) {
