@@ -13,12 +13,11 @@ html{
     top:20%;
     left:36%;
     position:absolute;
-   /* transform: translate{-50%,-50%};*/
-    /*box-sizing: border-box;
-    */
-   /* padding: 70px 30px;
+    transform: translate{-50%,-50%};
+    box-sizing: border-box;
+    padding: 70px 30px;
     opacity: 60%;
-    */
+    
 }
 
 .avatar{  width: 100px;
