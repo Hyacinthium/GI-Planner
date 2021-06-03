@@ -3,39 +3,61 @@
 <head>
 	<title>Profile</title>
 	<link rel = "stylesheet" href = "/css/profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-	<audio src="A Day in Mondstadt.mp3" autoplay loop>
-			<embed height="20" type="audio/midi" width="144" src="A Day in Mondstadt.mp3" volume="60" loop="true" autostart="true" />
+	<audio src="/audio/A Day in Mondstadt.mp3" autoplay loop>
+			<embed height="20" type="audio/midi" width="144" src="/audio/A Day in Mondstadt.mp3" volume="60" loop="true" autostart="true" />
 	</audio>
 	
 	<div class = "sidebar">
-		<img src = "images/characters/paimon.jpg" class = "profile_pic">
+		<img src = "/images/characters/paimon.jpg" class = "profile_pic">
 		<div class = "menu">
-			<h3>name</h3> <!--INSERT NAME OF USER-->
+			<h3>{{name}}</h3> <!--INSERT NAME OF USER-->
 			<ul>
 				<!-- <li><a href = "home.html">home</a></li> -->
 				<!-- <li><a href = "#">planner</a></li> -->
-				<li><a href = "/">log out</a></li>
+				<li><a href = "/"> Log out</a></li>
 			</ul>
 		</div>
 	</div>
 	
+
+    <div id="bio-form-container">
+                                <form id="bio-form" method="GET">
+                                    <input type="text" id="bio-input" name="bio" class="float-left profile-edit" placeholder="{{bio}}"></input>
+                                    <input type="submit" id="bio-submit" class="btn btn-outline-primary save-btn" value="save"></input>
+                                </form>
+                            </div>
 	<div class = "main">
-		<img src = "images/characters/razor.png" class = "character_pic">
-		
-		<div class = "stats1">
-		Name: <strong><div class = "name">Razor</div></strong><br>
-		Vision: <strong><div class = "vision">Electro</div></strong><br>
-		</div>
-		
-		<div class = "stats_weapon">
-		Weapon: <strong><div class = "weapon_name">Snowtomb Starsilver</div></strong><br>
-		<img src = "images/weapons/snowtomb.png" class = "weapon">
-		</div>
-		 <br>
+		<img src = "/images/characters/razor.png" class = "character_pic">
+
+        <div id="chara-name" class = "stats1">
+            Name:
+            <form id="chara-form" method="GET">
+                <input type="text" id="chara-input" name="chara" class="stats1" placeholder="{{chara}}"></input>
+                    <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
+            </form>
+        </div>
+
+        <div id="vision-name" class = "stats1">
+            Vision:
+            <form id="vision-form" method="GET">
+                <input type="text" id="vision-input" name="chara" class="stats1" placeholder="{{vision}}"></input>
+                    <input type="submit" id="vision-submit" class="save-btn" value="save"></input>
+            </form>
+        </div>
 		 
+         <div id="chara-name" class = "stats_weapon">
+            Weapon:
+            <form id="chara-form" method="GET">
+                <input type="text" id="chara-input" name="chara" class="stats_weapon" placeholder="{{weap}}"></input>
+                    <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
+            </form>
+        </div>
+		 <br>
+
 		<div class ="artifacts">
 			Artifacts: <strong><div class = "artifact_name">Gladiator's Finale</div></strong><br>
 
