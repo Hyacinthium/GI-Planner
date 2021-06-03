@@ -6,11 +6,13 @@
         <title>Sign Up to GI Planner</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel="stylesheet" type="text/css" href="/css/signup.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/signup.js"></script>
     </head>
 
     <body>
-        <audio src="Dream Aria.mp3" autoplay loop>
-			<embed height="20" type="audio/midi" width="144" src="Dream Aria.mp3" volume="60" loop="true" autostart="true" />
+        <audio src="/audio/Dream Aria.mp3" autoplay loop>
+			<embed height="20" type="audio/midi" width="144" src="/audio/Dream Aria.mp3" volume="60" loop="true" autostart="true" />
 	</audio>
 	
     <img class="log">
@@ -18,12 +20,13 @@
     <img src="images/characters/paimon.jpg" class="avatar">
     <h1>Sign Up Here</h1>
     
-    <form action="profile.html" method="post">
-    <p> Username</p>
-    <input type="text" name="username" placeholder="Enter Username">
-    <p> Password</p>
-    <input type="password" name="password" placeholder="Enter Password"><br>
-    <input type="submit" name="" value="Sign Up">
+    <form method="POST">
+        <p> Username</p>
+        <input type="text" id="username" name="username" placeholder="Enter Username">
+
+        <p> Password</p>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+        <input type="submit" id="submit" name="submit" value="Sign Up">
     </form>
     </div>
     </body>

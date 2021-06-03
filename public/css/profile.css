@@ -100,3 +100,8 @@ html{
 	width: auto;
 	height: auto;
 }
+
+.save-btn {
+    margin-left: 12px;
+    padding: 1.5 8;
+}

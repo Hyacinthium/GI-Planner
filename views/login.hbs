@@ -5,28 +5,29 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Login to GI Planner</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/login.css">
+        <script type="text/javascript" src="/js/login.js"></script>
     </head>
 
     <body>
-        <audio src="Dream Aria.mp3" autoplay loop>
-			<embed height="20" type="audio/midi" width="144" src="Dream Aria.mp3" volume="60" loop="true" autostart="true" />
+        <audio src="/audio/Dream Aria.mp3" autoplay loop>
+			<embed height="20" type="audio/midi" width="144" src="/audio/Dream Aria.mp3" volume="60" loop="true" autostart="true" />
 	</audio>
 	
     <img class="log">
     <div class="loginbox">
     <img src="images/characters/paimon.jpg" class="avatar">
     <h1>Login Here</h1>
+    <p id="error-message-login"></p>
     
-    <form action="profile.html" method="post">
-    <p> Username</p>
-    <input type="text" name="" placeholder="Enter Username">
-    <p> Password</p>
-    <input type="password" name="" placeholder="Enter Password"><br>
-    <input type="submit" name="" value="Login">
-    <a href="#">Lost your password?</a><br>
-    <a href="#">Don't have an acoount?</a>
-    </form>
+    <form method="POST">
+        <p> Username</p>
+        <input type="text" id="username" name="username" placeholder="Enter Username">
+
+        <p> Password</p>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br>
+        <input type="submit" id="submit" name="submit" value="Login">
     </div>
     </body>
 </html>
