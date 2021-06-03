@@ -10,7 +10,7 @@ const controller = {
      * @param {*} res 
      */
     getIndex: function(req, res) {
-        res.render('index', {name:"Leana"});   //hbs
+        res.render('home', {name:"Leana"});   //hbs
     },   // >,< if meron pa sunod
 
     getSignUp: function(req, res) {
