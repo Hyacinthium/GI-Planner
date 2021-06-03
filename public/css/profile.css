@@ -63,9 +63,13 @@ html{
 	right: -50px;
 }
 
+#chara-input, #weap-input, #vision-input, #flower-input, #plume-input, #circlet-input, #goblet-input, #sands-input{
+	color:black;
+}
+
 .main{
 	width: 1100px;
-	height: 1500px;
+	height: 2000px;
 	border-radius: 1%;
 	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
 	position: relative;
@@ -102,6 +106,6 @@ html{
 }
 
 .save-btn {
-    margin-left: 12px;
+    margin-left: 30px;
     padding: 1.5 8;
 }

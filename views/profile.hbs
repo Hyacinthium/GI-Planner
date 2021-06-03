@@ -23,21 +23,21 @@
 		</div>
 	</div>
 	
-
+<!--
     <div id="bio-form-container">
                                 <form id="bio-form" method="GET">
                                     <input type="text" id="bio-input" name="bio" class="float-left profile-edit" placeholder="{{bio}}"></input>
                                     <input type="submit" id="bio-submit" class="btn btn-outline-primary save-btn" value="save"></input>
                                 </form>
-                            </div>
+                            </div> -->
 	<div class = "main">
 		<img src = "/images/characters/razor.png" class = "character_pic">
 
         <div id="chara-name" class = "stats1">
             Name:
-            <p class="stats1">{{bio}}</p>
+            <p class="stats1">{{chara}}</p>
             <form id="chara-form" method="GET">
-                <input type="text" id="chara-input" name="chara" class="bio" placeholder="{{chara}}"></input>
+                <input type="text" id="chara-input" name="chara" class="stats1" placeholder="{{chara}}"></input>
                     <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
             </form>
         </div>
@@ -46,21 +46,57 @@
             Vision:
             <p class="stats1">{{vision}}</p>
             <form id="vision-form" method="GET">
-                <input type="text" id="vision-input" name="chara" class="stats1" placeholder="{{vision}}"></input>
+                <input type="text" id="vision-input" name="vision" class="stats1" placeholder="{{vision}}"></input>
                     <input type="submit" id="vision-submit" class="save-btn" value="save"></input>
             </form>
         </div>
 		 
-         <div id="chara-name" class = "stats_weapon">
+         <div id="weap-name" class = "stats_weapon">
             Weapon:
             <p class="stats1">{{weap}}</p>
             <form id="chara-form" method="GET">
-                <input type="text" id="chara-input" name="chara" class="stats_weapon" placeholder="{{weap}}"></input>
+                <input type="text" id="weap-input" name="weap" class="stats1" placeholder="{{weap}}"></input>
                     <input type="submit" id="chara-submit" class="save-btn" value="save"></input>
             </form>
         </div>
 		 <br>
 
+        <!-- Flower of Life, Plume of Death, Sands of Eon, Goblet of Eonothem, and Circlet of Logos-->
+        <div id="arti-name" class = "stats_weapon">
+            Artifacts:<br>
+
+            <h5>Flower of Life:</h5>
+                <p class="stats1">{{flower}}</p>
+                <form id="arti-form" method="GET">
+                    <input type="text" id="flower-input" name="flower" class="stats1" placeholder="{{flower}}"></input>
+                        <input type="submit" id="flower-submit" class="save-btn" value="save"></input>      
+                </form>
+
+            <h5>Plume of Death:</h5>
+                <p class="stats1">{{plume}}</p>
+                <form id="arti-form" method="GET">
+                    <input type="text" id="plume-input" name="plume" class="stats1" placeholder="{{plume}}"></input>
+                        <input type="submit" id="plume-submit" class="save-btn" value="save"></input>
+                
+            <h5>Sands of Eon:</h5>
+                <p class="stats1">{{sands}}</p>
+                <form id="arti-form" method="GET">
+                    <input type="text" id="sands-input" name="sands" class="stats1" placeholder="{{sands}}"></input>
+                        <input type="submit" id="sands-submit" class="save-btn" value="save"></input>
+
+            <h5>Goblet of Eonothem:</h5>
+                <p class="stats1">{{sands}}</p>
+                <form id="arti-form" method="GET">
+                    <input type="text" id="goblet-input" name="goblet" class="stats1" placeholder="{{goblet}}"></input>
+                        <input type="submit" id="goblet-submit" class="save-btn" value="save"></input>
+            
+            <h5>Circlet of Logos:</h5>
+                <p class="stats1">{{sands}}</p>
+                <form id="arti-form" method="GET">
+                    <input type="text" id="circlet-input" name="circlet" class="stats1" placeholder="{{circlet}}"></input>
+                        <input type="submit" id="circlet-submit" class="save-btn" value="save"></input>
+
+        </div>
 		<div class ="artifacts">
 			Artifacts: <strong><div class = "artifact_name">Gladiator's Finale</div></strong><br>
 
