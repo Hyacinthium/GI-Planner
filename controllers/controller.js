@@ -23,6 +23,7 @@ const controller = {
     getLogIn: function(req, res) {
         // add to routes and render login
         res.render('login',{});
+
     },
 
 }
