@@ -29,7 +29,7 @@ const controller = {
     getUpdateCharacter: function(req, res) {
         let sess = req.session;
         character = req.query.character;
-
+        
         sess.traveler.character = character;
         sess.save();
 

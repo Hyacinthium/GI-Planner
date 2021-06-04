@@ -10,7 +10,9 @@ app.get(`/login`, controller.getLogin);
 app.get(`/profile`, controller.getProfile);
 app.post(`/postsignup`, controller.postSignUp);
 app.post(`/postlogin`, controller.postLogin);
-
+app.get(`/updateCharacter`, controller.getUpdateCharacter);
+app.get(`/updateVision`, controller.getUpdateVision);
+app.get(`/updateWeapon`, controller.getUpdateWeapon);
 
 // post functions
 
