@@ -52,11 +52,6 @@ const controller = {
         });
     },
 
-<<<<<<< HEAD
-/**
- * //dko sure - felice
-=======
->>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
     getUpdateVision: function(req, res) {
         let sess = req.session;
         vision = req.query.vision;
@@ -64,129 +59,12 @@ const controller = {
         sess.traveler.vision = vision;
         sess.save();
 
-<<<<<<< HEAD
-        profile = new Profile({
-            about: about,
-            bio: sess.okami.profile.bio,
-         followers: sess.okami.profile.followers,
-            games: sess.okami.profile.games
-        })
-
-        Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-=======
         Traveler.findOneAndUpdate({username: sess.traveler.username},{vision: vision}, function(err, succ){
->>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
             if (err)
                 console.log(err);
         });
     },
 
-<<<<<<< HEAD
-//arti
-    getUpdateFlower: function(req, res) {
-        let sess = req.session;
-        flower = req.query.flower;
-
-    sess.traveler.flower = flower;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-},
-
-getUpdatePlume: function(req, res) {
-    let sess = req.session;
-    plume = req.query.plume;
-
-    sess.traveler.plume = plume;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-},
-
-getUpdateSands: function(req, res) {
-    let sess = req.session;
-    sands = req.query.sands;
-
-    sess.traveler.sands = sands;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-},
-
-getUpdateGoblet: function(req, res) {
-    let sess = req.session;
-    goblet = req.query.goblet;
-
-    sess.traveler.goblet = goblet;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-},
-
-getUpdateCirclet: function(req, res) {
-    let sess = req.session;
-    circlet = req.query.circlet;
-
-    sess.traveler.circlet = circlet;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-},
-
-
- */
-=======
->>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
