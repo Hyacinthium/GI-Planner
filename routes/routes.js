@@ -19,7 +19,7 @@ app.get(`/updatePlume`, controller.getUpdatePlume);
 app.get(`/updateSands`, controller.getUpdateSands);
 app.get(`/updateGoblet`, controller.getUpdateGoblet);
 app.get(`/updateCirclet`, controller.getUpdateCirclet);
-
+app.get(`/logout`, controller.getLogOut);
 // post functions
 
 module.exports = app;
