@@ -33,13 +33,6 @@ const controller = {
         sess.traveler.character = character;
         sess.save();
 
-        profile = new Profile({
-            about: about,
-            bio: sess.okami.profile.bio,
-            followers: sess.okami.profile.followers,
-            games: sess.okami.profile.games
-        })
-
         Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
             if (err)
                 console.log(err);
@@ -52,13 +45,6 @@ const controller = {
 
         sess.traveler.wepaon = weapon;
         sess.save();
-
-        profile = new Profile({
-            about: about,
-            bio: sess.okami.profile.bio,
-            followers: sess.okami.profile.followers,
-            games: sess.okami.profile.games
-        })
 
         Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
             if (err)
