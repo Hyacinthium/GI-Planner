@@ -52,8 +52,11 @@ const controller = {
         });
     },
 
+<<<<<<< HEAD
 /**
  * //dko sure - felice
+=======
+>>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
     getUpdateVision: function(req, res) {
         let sess = req.session;
         vision = req.query.vision;
@@ -61,6 +64,7 @@ const controller = {
         sess.traveler.vision = vision;
         sess.save();
 
+<<<<<<< HEAD
         profile = new Profile({
             about: about,
             bio: sess.okami.profile.bio,
@@ -69,11 +73,15 @@ const controller = {
         })
 
         Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
+=======
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{vision: vision}, function(err, succ){
+>>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
             if (err)
                 console.log(err);
         });
     },
 
+<<<<<<< HEAD
 //arti
     getUpdateFlower: function(req, res) {
         let sess = req.session;
@@ -177,6 +185,8 @@ getUpdateCirclet: function(req, res) {
 
 
  */
+=======
+>>>>>>> 102b0d403a00ca1f01f65c1dff4b1a63f096046e
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
