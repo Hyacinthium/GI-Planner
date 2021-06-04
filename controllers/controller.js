@@ -29,7 +29,7 @@ const controller = {
     getUpdateCharacter: function(req, res) {
         let sess = req.session;
         character = req.query.character;
-        
+
         sess.traveler.character = character;
         sess.save();
 
@@ -65,130 +65,71 @@ const controller = {
         });
     },
 
-/**dko sure - felice
-    getUpdateVision: function(req, res) {
+    getUpdateFlower: function(req, res) {
         let sess = req.session;
-        vision = req.query.vision;
+        flower = req.query.flower;
 
-        sess.traveler.vision = vision;
+        sess.traveler.flower = flower;
         sess.save();
 
-        profile = new Profile({
-            about: about,
-           bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-            games: sess.okami.profile.games
-        })
-
-        Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{flower: flower}, function(err, succ){
             if (err)
                 console.log(err);
         });
     },
 
-    //arti
-    getUpdateFlower: function(req, res) {
-        let sess = req.session;
-        flower = req.query.flower;
-
-    sess.traveler.flower = flower;
-    sess.save();
-
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
-    },
-
     getUpdatePlume: function(req, res) {
-    let sess = req.session;
-    plume = req.query.plume;
+        let sess = req.session;
+        plume = req.query.plume;
 
-    sess.traveler.plume = plume;
-    sess.save();
+        sess.traveler.plume = plume;
+        sess.save();
 
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{plume: plume}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
     },
 
     getUpdateSands: function(req, res) {
-    let sess = req.session;
-    sands = req.query.sands;
+        let sess = req.session;
+        sands = req.query.sands;
 
-    sess.traveler.sands = sands;
-    sess.save();
+        sess.traveler.sands = sands;
+        sess.save();
 
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{sands: sands}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
     },
 
     getUpdateGoblet: function(req, res) {
-    let sess = req.session;
-    goblet = req.query.goblet;
+        let sess = req.session;
+        goblet = req.query.goblet;
 
-    sess.traveler.goblet = goblet;
-    sess.save();
+        sess.traveler.goblet = goblet;
+        sess.save();
 
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{goblet: goblet}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
     },
 
     getUpdateCirclet: function(req, res) {
-    let sess = req.session;
-    circlet = req.query.circlet;
+        let sess = req.session;
+        circlet = req.query.circlet;
 
-    sess.traveler.circlet = circlet;
-    sess.save();
+        sess.traveler.circlet = circlet;
+        sess.save();
 
-    profile = new Profile({
-        about: about,
-        bio: sess.okami.profile.bio,
-        followers: sess.okami.profile.followers,
-        games: sess.okami.profile.games
-    })
-
-    Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
-        if (err)
-            console.log(err);
-    });
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{circlet: circlet}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
     },
 
-//gang dito
-*/
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
