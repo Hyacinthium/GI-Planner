@@ -21,6 +21,11 @@ const controller = {
         res.render('schedule',{});
     },
 
+    getLogOut: function(req,res) {
+        req.session.destroy();
+        res.render('home');
+    },
+
     getProfile: function(req, res) {
         let sess = req.session;
         res.render('profile',{  name: sess.traveler.username, character: sess.traveler.character,
