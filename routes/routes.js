@@ -8,6 +8,7 @@ app.get(`/`, controller.getIndex);
 app.get(`/signup`, controller.getSignUp);
 app.get(`/login`, controller.getLogin);
 app.get(`/profile`, controller.getProfile);
+app.get(`/schedule`, controller.getSchedule);
 app.post(`/postsignup`, controller.postSignUp);
 app.post(`/postlogin`, controller.postLogin);
 app.get(`/updateCharacter`, controller.getUpdateCharacter);
