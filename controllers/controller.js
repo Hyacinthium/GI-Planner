@@ -29,7 +29,7 @@ const controller = {
     getUpdateCharacter: function(req, res) {
         let sess = req.session;
         character = req.query.character;
-        
+
         sess.traveler.character = character;
         sess.save();
 
@@ -60,6 +60,71 @@ const controller = {
         sess.save();
 
         Traveler.findOneAndUpdate({username: sess.traveler.username},{vision: vision}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
+    getUpdateFlower: function(req, res) {
+        let sess = req.session;
+        flower = req.query.flower;
+
+        sess.traveler.flower = flower;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{flower: flower}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
+    getUpdatePlume: function(req, res) {
+        let sess = req.session;
+        plume = req.query.plume;
+
+        sess.traveler.plume = plume;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{plume: plume}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
+    getUpdateSands: function(req, res) {
+        let sess = req.session;
+        sands = req.query.sands;
+
+        sess.traveler.sands = sands;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{sands: sands}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
+    getUpdateGoblet: function(req, res) {
+        let sess = req.session;
+        goblet = req.query.goblet;
+
+        sess.traveler.goblet = goblet;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{goblet: goblet}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
+    getUpdateCirclet: function(req, res) {
+        let sess = req.session;
+        circlet = req.query.circlet;
+
+        sess.traveler.circlet = circlet;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{circlet: circlet}, function(err, succ){
             if (err)
                 console.log(err);
         });

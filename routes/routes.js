@@ -13,6 +13,11 @@ app.post(`/postlogin`, controller.postLogin);
 app.get(`/updateCharacter`, controller.getUpdateCharacter);
 app.get(`/updateVision`, controller.getUpdateVision);
 app.get(`/updateWeapon`, controller.getUpdateWeapon);
+app.get(`/updateFlower`, controller.getUpdateFlower);
+app.get(`/updatePlume`, controller.getUpdatePlume);
+app.get(`/updateSands`, controller.getUpdateSands);
+app.get(`/updateGoblet`, controller.getUpdateGoblet);
+app.get(`/updateCirclet`, controller.getUpdateCirclet);
 
 // post functions
 
