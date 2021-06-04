@@ -52,6 +52,19 @@ const controller = {
         });
     },
 
+    getUpdateVision: function(req, res) {
+        let sess = req.session;
+        vision = req.query.vision;
+
+        sess.traveler.vision = vision;
+        sess.save();
+
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{vision: vision}, function(err, succ){
+            if (err)
+                console.log(err);
+        });
+    },
+
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
