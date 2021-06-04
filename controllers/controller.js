@@ -50,7 +50,7 @@ const controller = {
         let sess = req.session;
         weapon = req.query.weapon;
 
-        sess.traveler.wepaon = weapon;
+        sess.traveler.weapon = weapon;
         sess.save();
 
         profile = new Profile({
@@ -65,7 +65,7 @@ const controller = {
                 console.log(err);
         });
     },
-//here
+
     postSignUp: function(req, res) {
         let username =  req.body.username;
         let password =  req.body.password;
