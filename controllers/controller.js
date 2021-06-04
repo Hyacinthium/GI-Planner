@@ -17,6 +17,10 @@ const controller = {
 
     },
 
+    getSchedule: function(req,res) {
+        res.render('schedule',{});
+    },
+
     getProfile: function(req, res) {
         let sess = req.session;
         res.render('profile',{  name: sess.traveler.username, character: sess.traveler.character,
