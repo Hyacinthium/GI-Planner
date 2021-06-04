@@ -33,7 +33,7 @@ const controller = {
         sess.traveler.character = character;
         sess.save();
 
-        Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
+        Traveler.findOneAndUpdate({username: sess.traveler.username}, {character: character}, function(err, succ){
             if (err)
                 console.log(err);
         });
@@ -46,7 +46,7 @@ const controller = {
         sess.traveler.weapon = weapon;
         sess.save();
 
-        Traveler.findOneAndUpdate({username: sess.traveler.username}, function(err, succ){
+        Traveler.findOneAndUpdate({username: sess.traveler.username},{weapon: weapon}, function(err, succ){
             if (err)
                 console.log(err);
         });
